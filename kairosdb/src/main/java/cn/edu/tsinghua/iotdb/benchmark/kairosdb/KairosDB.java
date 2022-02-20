@@ -164,6 +164,7 @@ public class KairosDB implements IDatabase {
       LOGGER.debug("response: {}", response);
       return new Status(true);
     } catch (Exception e) {
+      e.printStackTrace();
       return new Status(false, 0, e, e.toString());
     }
   }
